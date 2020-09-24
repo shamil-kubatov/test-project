@@ -8,11 +8,11 @@ $(document).ready(function(){
 
         if(order == 'desc')
         {
-            arrow = '&nbsp;<span class="glyphicon glyphicon-arrow-down"></span>';
+            arrow = '<span class="glyphicon glyphicon-arrow-down"><i style="font-size:24px;padding-left:5px" class="fa">&#xf0ab;</i></span>';
         }
         else
         {
-            arrow = '&nbsp;<span class="glyphicon glyphicon-arrow-up"></span>';
+            arrow = '<span class="glyphicon glyphicon-arrow-up"><i style="font-size:24px;padding-left:5px" class="fa">&#xf0aa;</i></span>';
         }
         $.ajax({
             url:"/main/ajax",

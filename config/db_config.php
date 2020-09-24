@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'dsn' => 'mysql:host=localhost;dbname=begetTest;charset=utf8',
-    'user' => 'Shamil_kub',
-    'pass' => 'loloshka09'
+    'dsn' => 'mysql:host=localhost;dbname=texnopde_test;charset=utf8',
+    'user' => 'texnopde_test',
+    'pass' => 'Loloshka0989'
 ];

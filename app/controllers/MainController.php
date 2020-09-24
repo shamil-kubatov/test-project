@@ -13,7 +13,7 @@ class MainController extends Controller {
 
 
 
-    public function ajaxAction(){
+  public function ajaxAction(){
         $db = DB::db_conect();
         $model =  new Task();
         $pages = new Paginator('3','page');
@@ -66,8 +66,7 @@ class MainController extends Controller {
                     $model->addTask($_POST);
                     header('Location: /');
                 }else{
-                    $msg = 'Не правильная валидация майла!';
-                    $this->set(compact('msg','task'));
+                    header('Location: /');
                 }
             }
         }
@@ -145,6 +144,5 @@ class MainController extends Controller {
 
        }
     }
-
 
 }

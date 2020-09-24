@@ -1,15 +1,3 @@
-<?php if(isset($msg)){ ?>
-    <div class="container">
-        <div class="errors" style="height: 50px;width: 100%;background: red">
-            <p style="font-family: 'Roboto';color: white;font-size: 30px;font-weight: 700;text-align: center"><?=$msg?></p>
-        </div>
-    </div>
-    <script>
-        setTimeout(function (){
-            document.querySelector('.errors').style.display = 'none';
-        },2500);
-    </script>
-<?php } ?>
 <section class="tasks">
     <div class="container">
         <div class="row">
@@ -29,7 +17,7 @@
                             <th><a class="column_sort" id="task" data-order="desc">task</a></th>
                             <th><a class="column_sort" id="email" data-order="desc">email</a></th>
                             <th><a class="column_sort" id="status" data-order="desc">status</a></th>
-                            <th><a class="column_sort" id="status" data-order="desc">Редактировано</a></th>
+                            <th><a class="column_sort" id="edit" data-order="desc">Редактировано</a></th>
                         </tr>
                         <?php  foreach ($data as $item){  ?>
                      <tr>

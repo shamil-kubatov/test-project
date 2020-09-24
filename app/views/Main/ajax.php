@@ -4,6 +4,7 @@
            <th><a class="column_sort" id="task" data-order="<?=$order?>">task</a></th>
            <th><a class="column_sort" id="email" data-order="<?=$order?>">email</a></th>
            <th><a class="column_sort" id="status" data-order="<?=$order?>">status</a></th>
+           <th><a class="column_sort" id="edit" data-order="<?=$order?>">Редактировано</a></th>
       </tr>
 <?php
 $_SESSION['sort'] = array();
@@ -15,6 +16,7 @@ foreach ($row as $item) { ?>
            <td><?=$item->task?></td>
            <td><?=$item->email?></td>
            <td><?=$item->status?></td>
+          <?php if($item->edit !== 'нет'){ ?> <td><?=$item->edit?></td> <?php } ?>
       </tr>
     <?php } ?>
 </table>
