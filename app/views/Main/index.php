@@ -19,7 +19,7 @@
                     <?php if(isset($_SESSION['admin'])){ ?>
                     <a class="btn btn-primary" style="float: right" href="/main/log-out-admin/">Выйти из админки</a>
                     <?php }else{  ?>
-                        <a class="btn btn-primary" style="float: right" href="pageAdmin/">Войти в админку</a>
+                        <a class="btn btn-primary" style="float: right" href="/main/auth-admin/">Войти в админку</a>
                     <?php } ?>
                 </div>
                 <div class="table-responsive" id="employee_table">
@@ -29,13 +29,17 @@
                             <th><a class="column_sort" id="task" data-order="desc">task</a></th>
                             <th><a class="column_sort" id="email" data-order="desc">email</a></th>
                             <th><a class="column_sort" id="status" data-order="desc">status</a></th>
+                            <th><a class="column_sort" id="status" data-order="desc">Редактировано</a></th>
                         </tr>
                         <?php  foreach ($data as $item){  ?>
                      <tr>
-                         <td style="width: 10%"><?=$item->id?></td>
+                         <td style="width: 2%"><?=$item->id?></td>
                          <td style="width: 30%"><?=$item->task?></td>
                          <td style="width: 30%"><?=$item->email?></td>
-                         <td style="width:30%"><?=$item->status?></td>
+                         <td style="width 30%"><?=$item->status?></td>
+                        <?php if($item->edit != 'нет'){ ?>
+                         <th style="width:8%"><?=$item->edit?></th>
+                        <?php } ?>
 
                      </tr>
                 <?php }?>
